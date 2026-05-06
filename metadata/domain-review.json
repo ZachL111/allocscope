@@ -1,0 +1,73 @@
+{
+  "repo": "allocscope",
+  "language": "C",
+  "category": "Systems programming",
+  "goal": "Explore arena allocation, alignment, guard checks, and fragmentation reports.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 80,
+      "slack": 25,
+      "drag": 28,
+      "confidence": 87,
+      "score": 188,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 63,
+      "slack": 31,
+      "drag": 18,
+      "confidence": 93,
+      "score": 196,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 69,
+      "slack": 44,
+      "drag": 32,
+      "confidence": 94,
+      "score": 180,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 67,
+      "slack": 34,
+      "drag": 12,
+      "confidence": 82,
+      "score": 214,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 64,
+      "slack": 27,
+      "drag": 16,
+      "confidence": 54,
+      "score": 161,
+      "lane": "ship"
+    }
+  ]
+}
