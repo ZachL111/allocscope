@@ -1,0 +1,17 @@
+{
+  "repo": "allocscope",
+  "thresholds": {
+    "signal": 4,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 3,
+    "ship": 199,
+    "watch": 96
+  },
+  "terms": [
+    "allocation pressure",
+    "dirty state",
+    "guard slack",
+    "layout drift"
+  ]
+}

@@ -64,3 +64,13 @@ gcc -std=c11 -Wall -Wextra -Werror -Iinclude src/domain_review.c tests/test_doma
 ./build/test_domain_review.exe
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-allocscope-detail.ps1
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-allocscope-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-allocscope-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
